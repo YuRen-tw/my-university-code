@@ -1,0 +1,67 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{rsfso}
+
+\usepackage{geometry}
+\geometry{top=10pt}
+\pagenumbering{gobble}
+
+%% Chinese
+\usepackage{fontspec}
+\newfontfamily\CJK{Noto Serif CJK KR}[BoldFont=Noto Serif CJK KR Bold]
+% Google's Noto CJK Font
+% https://www.google.com/get/noto/help/cjk/
+
+\theoremstyle{definition}
+\newtheorem{Ex}{}
+
+\newcommand{\set}[1]{\{#1\}}
+\renewcommand{\empty}{\varnothing}
+
+\begin{document}
+
+\title{\CJK%
+{\normalsize 臺北市立大學數學系~105~學年第二學期}\\[4pt]
+\textbf{基礎數學}\\
+{\large 期末考試題}{\small \S4.5－\S5.3}%
+}
+\author{}
+\date{\vspace{-10ex}}
+\maketitle
+
+\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\begin{Ex}
+Let $f:A\to B$ be a function, and $E$ and $F$ be subsets of $B$. Prove that $f^{-1}(E\cap F) = f^{-1}(E) \cap f^{-1}(F)$. \quad (10~points)
+\end{Ex}
+
+\begin{Ex}
+Prove that the open interval $(0,1)$ is uncountable. \quad (10~points)
+\end{Ex}
+
+\begin{Ex}
+Prove that the set $\mathbb{N}\times\mathbb{N}$ is denumerable (or countably infinite). \quad (12~points)
+\end{Ex}
+
+\begin{Ex}
+Let $f:A\to B$ be a one-to-one function, and $C$ and $D$ be subsets of $A$. Prove that $f(C\cap D) = f(C)\cap f(D)$. \quad (14~points)
+\end{Ex}
+
+\begin{Ex}
+Let $f:A\to B$ be a function, and suppose that $D\subseteq A$ and $E\subseteq B$. Prove that $D = f^{-1}(f(D))$ if and only if $f(A-D) \subseteq B-f(D)$. \quad (14~points)
+\end{Ex}
+
+\begin{Ex}
+Prove that every subset of countable set is countable. \quad (14~points)
+\end{Ex}
+
+\begin{Ex}
+Let $\mathcal{F}$ be the set of all binary sequences, i.e., th set of all functions from $\mathbb{N}$ to $\set{0,1}$. Prove that $\mathcal{F}\approx\mathcal{P}(\mathbb{N})$ the power set of $\mathbb{N}$. \quad (14~points)
+\end{Ex}
+
+\begin{Ex}
+Suppose that $A$ is finite. Prove that $A$ is not equivalent to any of its proper subsets. \quad (16~points)
+\end{Ex}
+\end{document}
+

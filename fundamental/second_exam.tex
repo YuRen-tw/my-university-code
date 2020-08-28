@@ -1,0 +1,69 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{rsfso}
+
+\usepackage{geometry}
+\geometry{top=10pt}
+\pagenumbering{gobble}
+
+%% Chinese
+\usepackage{fontspec}
+\newfontfamily\CJK{Noto Serif CJK KR}[BoldFont=Noto Serif CJK KR Bold]
+% Google's Noto CJK Font
+% https://www.google.com/get/noto/help/cjk/
+
+\theoremstyle{definition}
+\newtheorem{Ex}{}
+
+\newcommand{\set}[1]{\{#1\}}
+\renewcommand{\empty}{\varnothing}
+\DeclareMathOperator{\Dom}{Dom}
+\DeclareMathOperator{\Rng}{Rng}
+
+\begin{document}
+
+\title{\CJK%
+{\normalsize 臺北市立大學數學系~105~學年第二學期}\\[4pt]
+\textbf{基礎數學}\\
+{\large 第二次期中考試題}{\small \S3.1－\S4.4}%
+}
+\author{}
+\date{\vspace{-10ex}}
+\maketitle
+
+\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\begin{Ex}
+Suppose that $R$ and $S$ are equivalence relations on a set $A$. Prove that $R\cap S$ is an equivalence relation on $A$. \quad (10~points)
+\end{Ex}
+
+\begin{Ex}
+Let $R$ and $S$ are partial order relations on sets $A$ and $B$, respectively. Let $T$ be the relation on $A\times B$ defined as follows: for all $a,b\in A$ and $x,y\in B$, we have $(a,x)T(b,y)$ if $aRb$ and $xSy$. Prove that $T$ is a partial order relation on $A\times B$. \quad (10~points)
+\end{Ex}
+
+\begin{Ex}
+Suppose that $f:A\to B$ and $g:B\to C$ are functions. Prove that $g\circ f$ is a function from $A$ to $C$, and $\Dom(g\circ f) = A$. \quad (12~points)
+\end{Ex}
+
+\begin{Ex}
+Suppose that $f:A\to B$ is a function with $\Rng(f) = C$. Prove that if $f^{-1}$ is a function, then $f^{-1}\circ f = I_A$, and $f\circ f^{-1} = I_C$. \quad (12~points)
+\end{Ex}
+
+\begin{Ex}
+Let $f$ be a function from set $A$ to set $B$. Prove that $f^{-1}$ is a function from $\Rng(f)$ to $A$ if and only if $f$ is one-to-one. \quad (12~points)
+\end{Ex}
+
+\begin{Ex}
+Suppose that $f:A\to C$ and $g:B\to C$ are functions. Prove that $f$ and $g$ are equal if and only if $\Dom(f) = \Dom(g)$ and $f(x) = g(x)$ for all $x\in\Dom(f)$. \quad (14~points)
+\end{Ex}
+
+\begin{Ex}
+Suppose that functions $f:A\to B$ and $g:B\to C$ are one-to-one and onto. Prove that $g\circ f$ is one-to-one and onto. \quad (14~points)
+\end{Ex}
+
+\begin{Ex}
+Let $\mathcal{P}$ be a partition of the nonempty set $A$. For $x$ and $y\in A$, define $xQy$ if and only if there exists $C\in\mathcal{P}$ such that $x\in C$ and $y\in C$. Prove that $Q$ is an equivalence relation on $A$ and $A/Q = \mathcal{P}$. \quad (16~points)
+\end{Ex}
+\end{document}
+
