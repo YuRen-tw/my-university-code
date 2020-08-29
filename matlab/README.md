@@ -1,0 +1,72 @@
+# 數值分析 Numerical Analysis
+
+用書：Richard L. Burden, J. Douglas Faires, and Annette M. Burden. _Numerical Analysis_ (10th ed).
+
+## 2019，108-1 學期，課本演算法 Matlab 檔（可能也能用 Octave 執行）
+- 方程式求解 Solutions of Equations
+  - `p = method(f, df, p0, TOL, N)`
+    - `df`：derivative of `f`
+    - `p0`：initial approximation
+    - `TOL`：tolerance
+    - `N`：maximum number of iterations
+    - `p`：approximate solution of `f(x) = 0`
+  - [`newton.m`](./newton.m)：`Algo. 2.3` 牛頓法 Newton's method
+  - [`secant.m`](./secant.m)：`Algo. 2.4` 割線法 secant method
+  - [`false_position.m`](./false_position.m)：`Algo. 2.5` 試位法 method of false position
+- 插值與多項式逼近 Interpolation and Polynomial Approximation
+  - [`NewtonDiviedDifference.m`](./NewtonDiviedDifference.m)：`Algo. 3.2` 牛頓均差 Newton's divided difference
+    - `result = NewtonDiviedDifference(X, Y)`
+      - `X`：`[x₁, x₂, ... ]`
+      - `Y`：`[f(x₁), f(x₂), ... ]`
+      - `result`：table of divied differences
+  - [`NaturalCubicSpline.m`](./NaturalCubicSpline.m)：`Algo. 3.4` 自然三次樣條 natural cubic spline
+    - `result = NaturalCubicSpline(X, Y)`
+      - `X`：`[x₁, x₂, ... ]`
+      - `Y`：`[f(x₁), f(x₂), ... ]`
+      - `result`：`[aj', bj', cj', dj']`
+        - `Sₖ(x) = aₖ + bₖ(x - xₖ) + cₖ(x - xₖ)² + dₖ(x - xₖ)³` for `xₖ ≤ x ≤ xₖ₊₁`
+- 數值微分 Numerical Differentiation
+  - [`NumDiff.m`](./NumDiff.m)：數值微分 Numerical Differentiation
+    - 三點法 three-point formulas、五點法 five-point formulas
+    - `result = NumDiff(Y, X, ith, pt, direct, step)`
+      - 檔案裡有詳細說明
+    - [`showNumDiff.m`](./showNumDiff.m)：執行範例 Example of `NumDiff`
+    - [`result.txt`](./result.txt)
+- 數值積分 Numerical Integration
+  - [`Simpson.m`](./Simpson.m)：辛普森積分法 Simpson's rule
+    - `result = Simpson(f, a, b)`
+      - integral of `f` on interval `[a, b]`
+  - [`CompositeSimpson.m`](./CompositeSimpson.m)：`Algo. 4.1` 複合辛普森積分法 composite Simpson's rule
+    - `result = CompositeSimpson(f, a, b, N)`
+      - `N`：positive integer
+      - `result`：integral of `f` on interval `[a, b]`
+  - [`CompositeDoubleSimpson.m`](./CompositeDoubleSimpson.m)：`Algo. 4.4` 二重（複合）辛普森積分 Simpson's double Integral
+    - `result = CompositeDoubleSimpson(f, ya, yb, a, b, xN, yN)`
+      - `xN`、`yN`：positive integers
+      - `result`：integral of `f` on interval `[a, b] × [ya(x), yb(x)]`
+  - [`CompositeNSimpson.m`](./CompositeNSimpson.m)： n 重（複合）辛普森積分 Simpson's double Integral
+    - `result = CompositeNSimpson(f, A, B, N)`
+      - `N`：positive integers `[N₁, N₂, N₃, ... ]`
+      - `result`：integral of `f` on interval `[A{1}, B{1}] × [A{2}(x₁), B{2}(x₁)] × [A{3}(x₁,x₂), B{3}(x₁,x₂)] × ...`
+  - [`RombergIntegration.m`](./RombergIntegration.m)：`Algo. 4.2` 龍貝格積分 Romberg integration
+    - `R = RombergIntegration(f, a, b, N)`
+      - `N`：positive integer
+      - `R`：table of integrals of `f` on interval `[a, b]`
+  - [`AdaptiveQuadrate.m`](./AdaptiveQuadrate.m)：`Algo. 4.3` 自適應積分 adaptive quadrate
+    - `result = AdaptiveQuadrate(f, a, b, TOL, N)`
+      - `TOL`：tolerance
+      - `N`：limit number of levels
+      - `result`：integral of `f` on interval `[a, b]`
+- 常微分方程的初值問題 Initial-Value Problems for Ordinary Differential Equations
+  - [`RungeKutta4.m`](./RungeKutta4.m)：`Algo. 5.2` 四階龍格－庫塔法 Runge-Kutta method of order 4
+    - `result = RungeKutta4(f, c, a, b, N)`
+      - initial-value problem
+        - `y' = f(t, y)`
+        - `a ≤ t ≤ b`
+        - `y(a) = c`
+      - `N`：positive integer
+      - `result`：`[t', w']`
+        - approximation `wₖ` to `y` at `tₖ`
+- 其他
+  - [`Algorithm_6_7.m`](./Algorithm_6_7.m)：`Algo. 6.7`
+  

@@ -4,7 +4,8 @@
 
 ## 目錄
 - 數學系 Department of Mathematics
-  - [`cryptography`](./cryptography/)：密碼學導論 Introduction to Cryptography
   - [`fundamental`](./fundamental/)：基礎數學 Fundamental Mathematics
+  - [`cryptography`](./cryptography/)：密碼學導論 Introduction to Cryptography
+  - [`matlab`](./matlab/)：數值分析 Numerical Analysis
 - 其他
   - [`programming-competition`](./programming-competition/)：全校程式設計實作競賽 Programming Competition
