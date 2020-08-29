@@ -1,10 +1,8 @@
-# Fundamental Mathematics 2017
+# 基礎數學 Fundamental Mathematics
 
-105 學年度第二學期，基礎數學
+用書：Douglas Smith, Maurice Eggen, and Richard St. Andre. _A Transition to Advanced Mathematics_ (8th ed).
 
-用書：Douglas Smith, Maurice Eggen, and Richard St. Andre. _A Transition to Advanced Mathematics_.
-
-## 段考題目 LaTeX 碼
+## 2017，105-2 學期，段考題目 LaTeX 檔
 - [`first_exam.tex`](./first_exam.tex)：第一次期中考
   - §2.1 -- §3.1：集合、數學歸納法、良序性質、關係
 - [`second_exam.tex`](./second_exam.tex)：第二次期中考
