@@ -1,0 +1,2 @@
+# Reclassify `.m` files as MATLAB (to correct the MATLAB count)
+*.m linguist-language=MATLAB
